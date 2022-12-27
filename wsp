@@ -1,4 +1,28 @@
 --TP AREAS
+
+--Ancient
+
+local work = game.Workspace
+local part = Instance.new("Part", work)
+part.Name = "AncientPart"
+local Ancientp = work.AncientPart
+Ancientp.Size = Vector3.new(5, 340, 5)
+Ancientp.Anchored = true
+Ancientp.Position = Vector3.new(-549, 138, -1198)
+Ancientp.Transparency = 0.7
+Ancientp.CanCollide = false
+Ancientp.Color = Color3.fromRGB(245, 205, 48)
+Ancientp.Material = "Neon"
+
+--Ancient
+local plrl = game.Players.LocalPlayer
+local work = game.Workspace
+local Ancientp = work.AncientPart
+
+Ancientp.Touched:Connect(function()
+plrl.Character.HumanoidRootPart.CFrame = CFrame.new(-549, 318, -1198)
+end)
+
 --Sky
 local work = game.Workspace
 local part = Instance.new("Part", work)
@@ -34,13 +58,4 @@ local Skyp = work.SkyPart
 
 Skyp.Touched:Connect(function()
 plrl.Character.HumanoidRootPart.CFrame = CFrame.new(-504, 151, -605)
-end)
-
---Ancient
-local plrl = game.Players.LocalPlayer
-local work = game.Workspace
-local Ancientp = work.AncientPart
-
-Ancientp.Touched:Connect(function()
-plrl.Character.HumanoidRootPart.CFrame = CFrame.new(-549, 318, -1198)
 end)
